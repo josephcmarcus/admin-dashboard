@@ -404,6 +404,7 @@ body {
 
     .container-projects {
         padding: 0 2rem;
+        margin-bottom: unset;
     }
 
     .project-card {
