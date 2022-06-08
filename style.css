@@ -37,26 +37,31 @@ body {
     display: none;
 }
 
+.mobile-menu-toggle {
+    display: none;
+}
+
 .nav-link {
-    display: flex;
     align-items: center;
     margin-bottom: 1.4rem;
     font-weight: bold;
     transition: 300ms;
 }
 
-.logo,
-.nav-link {
-    cursor: pointer;
+.nav-link > a {
+    display: flex;
+    text-decoration: none;
+    color: white;
 }
 
 .nav-link img {
     margin-right: 1rem;
 }
 
-.container-nav ul {
+.nav-list {
     padding: 0;
     margin-left: 1.5rem;
+    list-style: none;
 }
 
 .nav-link img {
@@ -64,15 +69,15 @@ body {
 }
 
 .profile-image-small {
-    max-height: 50px;
+    height: 50px;
 }
 
 .profile-image-header {
-    max-height: 35px;
+    height: 35px;
 }
 
 .profile-image-large {
-    max-height: 70px;
+    height: 70px;
 }
 
 .container-header {
@@ -111,7 +116,7 @@ body {
     padding-right: .7rem;
 }
 
-.search-bar input {
+.search-bar > input {
     border: none;
     background-color: rgb(224, 226, 227);
     height: 2rem;
@@ -220,12 +225,12 @@ body {
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.33);
 }
 
-.project-description>h3,
+.project-description > h3,
 h2 {
     margin-bottom: 0;
 }
 
-.project-description>p {
+.project-description > p {
     margin-top: 0;
 }
 
@@ -264,12 +269,12 @@ h2 {
     grid-area: announcements-title;
 }
 
-.announcement>h3 {
+.announcement > h3 {
     font-size: 1rem;
 }
 
-.announcement>h3,
-.announcement>p,
+.announcement > h3,
+.announcement > p,
 .trend-title {
     margin: 0;
 }
@@ -361,7 +366,7 @@ h2 {
     .container-nav {
         padding: 1rem 2rem;
         grid-area: nav;
-        grid-template-columns: .5fr 1fr;
+        grid-template-columns: 1fr .5fr;
         grid-template-rows: unset;
         grid-template-areas:
             "logo profile";
@@ -397,9 +402,37 @@ h2 {
         filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
     }
 
-    .nav-group-one,
-    .nav-group-two {
+    .mobile-menu-toggle {
+        filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
+        display: unset;
+        grid-area: menu;
+        align-self: center;
+        justify-self: flex-end;
+        transition: 500ms;
+    }
+
+    nav {
         display: none;
+    }
+
+    .nav-list {
+        background-color: rgb(14, 111, 222);
+        position: absolute;
+        right: 0;
+        transition: 1s;
+    }
+
+    .mobile-menu-toggle.clicked {
+        transform: rotate(90deg);
+    }
+
+    nav.clicked {
+        display: block;
+    }
+
+    .nav-list.clicked  {
+        display: block;
+        padding: 2rem 3rem;
     }
 
     .profile-greeting,
