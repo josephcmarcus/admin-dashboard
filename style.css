@@ -6,8 +6,8 @@ body {
 .container-all {
     display: grid;
     grid-template-areas:
-    "sidebar header"
-    "sidebar main";
+        "sidebar header"
+        "sidebar main";
     grid-template-columns: 15rem 1fr;
 }
 
@@ -45,11 +45,8 @@ body {
     transition: 300ms;
 }
 
-.nav-link:hover {
-    transform: translateX(.5rem);
-}
-
-.logo, .nav-link {
+.logo,
+.nav-link {
     cursor: pointer;
 }
 
@@ -85,7 +82,7 @@ body {
     display: grid;
     grid-template-columns: minmax(40%, 60%) 1fr;
     grid-template-rows: 1fr 1fr;
-    box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.33);
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.33);
     z-index: 1;
 }
 
@@ -139,10 +136,6 @@ body {
     transition: 300ms;
 }
 
-.container-profile .profile-image-header:hover {
-    transform: scale(1.2);
-}
-
 .container-interaction-buttons {
     display: flex;
     align-items: center;
@@ -161,10 +154,6 @@ body {
     transition: 200ms;
 }
 
-.interaction-btn:hover {
-    background-color: rgb(12, 77, 152);
-}
-
 .profile-greeting {
     display: flex;
     align-items: center;
@@ -174,7 +163,8 @@ body {
     margin-right: 1rem;
 }
 
-.greeting-top, .greeting-bottom {
+.greeting-top,
+.greeting-bottom {
     display: block;
 }
 
@@ -191,8 +181,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr .8fr;
     grid-template-areas:
-    "projects projects announcements"
-    ". . trending";
+        "projects projects announcements"
+        ". . trending";
     gap: 20px;
     background-color: rgb(216, 229, 241);
 }
@@ -201,15 +191,17 @@ body {
     padding-left: 2rem;
     grid-area: projects;
     display: grid;
-    grid-template-areas: 
-    "projects-title projects-title"
-    "cards cards";
+    grid-template-areas:
+        "projects-title projects-title"
+        "cards cards";
     grid-auto-rows: minmax(min-content, max-content);
     gap: 20px;
 }
 
-.section-title-projects, .section-title-announcements, 
-.section-title-trending, .trend-title {
+.section-title-projects,
+.section-title-announcements,
+.section-title-trending,
+.trend-title {
     font-weight: 400;
 }
 
@@ -225,14 +217,15 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: .5rem;
-    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.33);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.33);
 }
 
-.project-description > h3, h2 {
+.project-description>h3,
+h2 {
     margin-bottom: 0;
 }
 
-.project-description > p {
+.project-description>p {
     margin-top: 0;
 }
 
@@ -245,17 +238,13 @@ body {
     transition: 300ms;
 }
 
-.project-tools svg:hover {
-    transform: scale(1.2)
-}
-
 .container-right-sidebar {
     grid-area: announcements;
     display: grid;
-    grid-template-areas: 
-    "announcements-title"
-    "announcements-blurbs"
-    "container-trending";
+    grid-template-areas:
+        "announcements-title"
+        "announcements-blurbs"
+        "container-trending";
     gap: 20px;
     width: 90%;
     grid-auto-rows: minmax(min-content, max-content);
@@ -264,7 +253,7 @@ body {
 .container-announcements {
     background-color: white;
     border-radius: .5rem;
-    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.33);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.33);
 }
 
 .announcement {
@@ -275,11 +264,13 @@ body {
     grid-area: announcements-title;
 }
 
-.announcement > h3 {
+.announcement>h3 {
     font-size: 1rem;
 }
 
-.announcement > h3, .announcement > p, .trend-title {
+.announcement>h3,
+.announcement>p,
+.trend-title {
     margin: 0;
 }
 
@@ -301,7 +292,7 @@ body {
 .container-trending {
     background-color: white;
     border-radius: .5rem;
-    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.33);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.33);
 }
 
 .trending-project {
@@ -318,22 +309,42 @@ body {
     padding-bottom: 1.5rem;
 }
 
-.trending-project > .profile-image-small {
+.trending-project>.profile-image-small {
     padding-right: 1rem;
+}
+
+@media (hover: hover) {
+ 
+    .nav-link:hover {
+        transform: translateX(.5rem);
+    }
+    
+    .container-profile .profile-image-header:hover {
+        transform: scale(1.2);
+    }
+
+    .interaction-btn:hover {
+        background-color: rgb(12, 77, 152);
+    }
+
+    .project-tools svg:hover {
+        transform: scale(1.2)
+    }
+
 }
 
 @media (max-width: 1024px) {
     .container-main {
         grid-template-columns: 1fr .8fr;
         grid-template-areas:
-        "projects announcements"
-        "projects trending";
+            "projects announcements"
+            "projects trending";
     }
 
     .container-projects {
-        grid-template-areas: 
-        "projects-title"
-        "cards";
+        grid-template-areas:
+            "projects-title"
+            "cards";
         margin-bottom: 2rem;
     }
 }
@@ -342,9 +353,9 @@ body {
     .container-all {
         grid-template-columns: 1fr;
         grid-template-areas:
-        "nav"
-        "header"
-        "main";
+            "nav"
+            "header"
+            "main";
     }
 
     .container-nav {
@@ -352,8 +363,8 @@ body {
         grid-area: nav;
         grid-template-columns: .5fr 1fr;
         grid-template-rows: unset;
-        grid-template-areas: 
-        "logo profile";
+        grid-template-areas:
+            "logo profile";
     }
 
     .container-logo {
@@ -386,20 +397,22 @@ body {
         filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
     }
 
-    .nav-group-one, .nav-group-two {
+    .nav-group-one,
+    .nav-group-two {
         display: none;
     }
 
-    .profile-greeting, .profile-name {
+    .profile-greeting,
+    .profile-name {
         display: none;
     }
 
     .container-main {
         grid-template-columns: 1fr;
         grid-template-areas:
-        "projects"
-        "announcements"
-        "trending";
+            "projects"
+            "announcements"
+            "trending";
     }
 
     .container-projects {
@@ -418,9 +431,9 @@ body {
 
     .container-header {
         padding: 1rem 2rem;
-        grid-template-areas: 
-        "search"
-        "buttons";
+        grid-template-areas:
+            "search"
+            "buttons";
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 1rem;
